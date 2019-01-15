@@ -31,6 +31,7 @@ $loader = new YamlConfigLoader();
 $processor = new ConfigProcessor();
 
 $projectConfig = $root . '/distrodisco.yml';
+$config->set('project_root', $root);
 
 $processor->extend($loader->load(dirname(__DIR__) . '/default.distrodisco.yml'));
 $processor->extend($loader->load($projectConfig));

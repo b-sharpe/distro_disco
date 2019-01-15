@@ -12,15 +12,26 @@ use Robo\Robo;
  */
 abstract class DiscoCommand extends Tasks {
 
-  /** configuration. */
+  /**
+   * Drupal Configuration.
+   *
+   * @var mixed
+   */
   protected $drupalConfig;
+
+  /**
+   * Path to project root.
+   *
+   * @var string
+   */
+  protected $projectRoot;
 
   /**
    * DiscoCommand constructor.
    */
   public function __construct() {
-    $drupalConfig = Robo::config()->get('drupal');
-    $this->drupalConfig = $drupalConfig;
+    $this->projectRoot = Robo::config()->get('project_root');
+    $this->drupalConfig = Robo::config()->get('drupal');
   }
 
   /**
