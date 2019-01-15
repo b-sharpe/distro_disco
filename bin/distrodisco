@@ -1,0 +1,11 @@
+#!/usr/bin/env php
+<?php
+/**
+ * @file This file is a simply shell wrapper for running DistroDisco Cli Robo commands.
+ *
+ * Having a wrapper permits other non-shell files to directly require
+ * distrodisco-robo.php.
+ */
+
+// Shell wrapper for Acquia Cli.
+require_once __DIR__ . '/distrodisco-robo.php';
