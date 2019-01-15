@@ -1,0 +1,28 @@
+{
+    "name": "b-sharpe/distrodisco",
+    "description": "A Robo CLI tool for creating sub-profiles in Drupal 8+",
+    "authors": [
+        {
+            "name": "Bryan Sharpe",
+            "email": "bryansharpe@gmail.com"
+        }
+    ],
+    "license": "MIT",
+    "require": {
+        "consolidation/robo": "^1.2",
+        "symfony/lock": "^3|^4"
+    },
+    "bin": ["bin/distrodisco"],
+    "autoload":{
+        "psr-4":{
+            "DistroDisco\\":"src"
+        }
+    },
+    "require-dev": {
+        "squizlabs/php_codesniffer": "^3.1"
+    },
+    "scripts": {
+        "lint": "php -l ./src/",
+        "sniff": "./vendor/bin/phpcs -s --standard=PSR2 ./src/"
+    }
+}
